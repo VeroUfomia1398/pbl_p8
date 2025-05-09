@@ -22,6 +22,6 @@ void loop() {
       sg90.write(180);
       delay(1000);
       sg90.write(90);
+    }
   }
-}
 }
