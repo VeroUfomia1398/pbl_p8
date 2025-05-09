@@ -1,13 +1,13 @@
 #include <Servo.h>
 
-Servo myServo;
+Servo sg90;
 
 const int servoPin = 9;
 
 void setup() {
   Serial.begin(9600);
-  myServo.attach(servoPin);
-  myServo.write(90);
+  sg90.attach(servoPin);
+  sg90.write(90);
 }
 
 void loop() {
@@ -15,12 +15,12 @@ void loop() {
     char command = Serial.read();
 
     if (command == 'L') {
-      myServo.write(0);
+      sg90.write(0);
       delay(1000);
-      myServo.write(90);
+      sg90.write(90);
     } else if (command == 'R') {
-      myServo.write(180);
+      sg90.write(180);
       delay(1000);
-      myServo.write(90);
+      sg90.write(90);
   }
 }
